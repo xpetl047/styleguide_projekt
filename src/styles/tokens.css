@@ -1,0 +1,25 @@
+:root {
+  --font-family: 'Inter', sans-serif;
+
+  --color-primary: #6EDB92;
+  --color-error: #e53e3e;
+  --color-background: #f5f5f5;
+
+  --border-radius: 0.8rem;
+  --card-padding: 2.4rem;
+  --card-background: #fff;
+  --card-border-color: #e4e4e4;
+  --card-shadow: 0 0.4rem 1.6rem rgba(0, 0, 0, 0.08);
+
+  --btn-border-radius: 0.6rem;
+  --btn-padding: 0.8rem 2.4rem;
+
+  --input-border-radius: 0.6rem;
+  --input-padding: 0.8rem 1.2rem;
+  --input-border-color: #ccc;
+  --input-border-color-focus: var(--color-primary);
+
+  --grid-columns: 12;
+  --grid-gap: 2.4rem;
+  --grid-max-width: 120rem;
+}
