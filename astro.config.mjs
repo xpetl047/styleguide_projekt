@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://pacesmarek.github.io',
-  base: '/twa-styleguide-2026',
+  site: 'https://xpetl047.github.io',
+  base: '/styleguide_projekt',
   vite: {
     server: {
       watch: {
