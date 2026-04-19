@@ -3,7 +3,6 @@ import '../styles/tokens.css';
 import '../styles/typography.css';
 import '../styles/components.css';
 import '../styles/styleguide.css';
-import '../styles/typography.css';
 ---
 <html lang="cs">
   <head>
@@ -13,17 +12,21 @@ import '../styles/typography.css';
   </head>
   <body>
     <div class="container">
-    <h1>Style Guide</h1>
+      <h1>Style Guide</h1>
 
-    <h2>Pages</h2>
-    <ul>
-      <li><a href={`${import.meta.env.BASE_URL}/login`}>Login</a></li>
-    </ul>
-    <h2>Components</h2>
-    <div class="component-item">
-      <h3>Card</h3>
-      <div class="component-preview">
-        <div class="card">Card content</div>
+      <h2>Pages</h2>
+      <ul>
+        <li><a href={`${import.meta.env.BASE_URL}/login`}>Login</a></li>
+      </ul>
+
+      <h2>Components</h2>
+
+      <div class="component-item">
+        <h3>Card</h3>
+        <div class="component-preview">
+          <div class="card">Card content</div>
+        </div>
+        <pre><code>&lt;div class="card"&gt;...&lt;/div&gt;</code></pre>
       </div>
 
       <div class="component-item">
@@ -31,23 +34,81 @@ import '../styles/typography.css';
         <div class="component-preview">
           <button class="btn btn-primary">Click me</button>
         </div>
-        <pre>
-          <code>
-            &lt;button class=&quot;btn btn-primary&quot;&gt;Click me&lt;/button&gt;
-          </code>
-        </pre>
+        <pre><code>&lt;button class="btn btn-primary"&gt;Click me&lt;/button&gt;</code></pre>
       </div>
 
       <div class="component-item">
         <h3>Input</h3>
         <div class="component-preview">
-          <input type="text" class="input" placeholder="Enter text" />
+          <input class="input" type="text" placeholder="Zadejte text..." />
         </div>
-        <pre>
-          <code>
-            &lt;input type=&quot;text&quot; class=&quot;input&quot; placeholder=&quot;Enter text&quot; /&gt;
-          </code>
-        </pre>
+        <pre><code>&lt;input class="input" type="text" placeholder="..." /&gt;</code></pre>
+      </div>
+
+      <div class="component-item">
+        <h3>Alert</h3>
+        <div class="component-preview">
+          <p class="alert alert-error">Nesprávné přihlašovací údaje.</p>
+        </div>
+        <pre><code>&lt;p class="alert alert-error"&gt;Text chyby.&lt;/p&gt;</code></pre>
+      </div>
+
+      <div class="component-item">
+        <h3>Badge — status</h3>
+        <div class="component-preview">
+          <span class="badge badge-open">open</span>
+          <span class="badge badge-in-progress">in-progress</span>
+          <span class="badge badge-closed">closed</span>
+        </div>
+        <pre><code>&lt;span class="badge badge-open"&gt;open&lt;/span&gt;
+&lt;span class="badge badge-in-progress"&gt;in-progress&lt;/span&gt;
+&lt;span class="badge badge-closed"&gt;closed&lt;/span&gt;</code></pre>
+      </div>
+
+      <div class="component-item">
+        <h3>Badge — priorita</h3>
+        <div class="component-preview">
+          <span class="badge badge-low">low</span>
+          <span class="badge badge-medium">medium</span>
+          <span class="badge badge-high">high</span>
+        </div>
+        <pre><code>&lt;span class="badge badge-low"&gt;low&lt;/span&gt;
+&lt;span class="badge badge-medium"&gt;medium&lt;/span&gt;
+&lt;span class="badge badge-high"&gt;high&lt;/span&gt;</code></pre>
+      </div>
+
+      <div class="component-item">
+        <h3>Table</h3>
+        <div class="component-preview">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Název</th>
+                <th>Status</th>
+                <th>Priorita</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Opravit login</td>
+                <td><span class="badge badge-open">open</span></td>
+                <td><span class="badge badge-high">high</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Nová funkce</td>
+                <td><span class="badge badge-closed">closed</span></td>
+                <td><span class="badge badge-low">low</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <pre><code>&lt;table class="table"&gt;
+  &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Název&lt;/th&gt;...&lt;/tr&gt;&lt;/thead&gt;
+  &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
       </div>
 
       <div class="component-item">
@@ -71,82 +132,13 @@ import '../styles/typography.css';
             <div class="col-4 grid-col-demo">col-4</div>
             <div class="col-8 grid-col-demo grid-col-demo--alt">col-8</div>
           </div>
-          <div class="row grid-row-demo">
-            <div class="col-6 grid-col-demo">col-6</div>
-            <div class="col-6 grid-col-demo grid-col-demo--alt">col-6</div>
-          </div>
         </div>
-        <pre>
-          <code>
-            &lt;div class=&quot;row&quot;&gt;
-              &lt;div class=&quot;col-4&quot;&gt;...&lt;/div&gt;
-              &lt;div class=&quot;col-8&quot;&gt;...&lt;/div&gt;
-            &lt;/div&gt;
-          </code>
-        </pre>
+        <pre><code>&lt;div class="row"&gt;
+  &lt;div class="col-4"&gt;...&lt;/div&gt;
+  &lt;div class="col-8"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
       </div>
 
-    </div>
-
-    <div class="component-item">
-      <h3>Input</h3>
-      <div class="component-preview">
-        <input class="input" type="text" placeholder="Zadejte text..." />
-      </div>
-      <pre>
-        <code>
-          &lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;Zadejte text...&quot; /&gt;
-        </code>
-      </pre>
-    </div>
-
-    <div class="component-item">
-      <h3>Alert</h3>
-      <div class="component-preview">
-        <p class="alert alert-error">Nesprávné přihlašovací údaje.</p>
-      </div>
-      <pre>
-        <code>
-          &lt;p class=&quot;alert alert-error&quot;&gt;Text chyby.&lt;/p&gt;
-        </code>
-      </pre>
-    </div>
-
-    <div class="component-item">
-      <h3>Grid (12 cols)</h3>
-      <div class="component-preview">
-        <div class="row">
-          <div class="col-1 grid-col-demo">1</div>
-          <div class="col-1 grid-col-demo">2</div>
-          <div class="col-1 grid-col-demo">3</div>
-          <div class="col-1 grid-col-demo">4</div>
-          <div class="col-1 grid-col-demo">5</div>
-          <div class="col-1 grid-col-demo">6</div>
-          <div class="col-1 grid-col-demo">7</div>
-          <div class="col-1 grid-col-demo">8</div>
-          <div class="col-1 grid-col-demo">9</div>
-          <div class="col-1 grid-col-demo">10</div>
-          <div class="col-1 grid-col-demo">11</div>
-          <div class="col-1 grid-col-demo">12</div>
-        </div>
-        <div class="row grid-row-demo">
-          <div class="col-4 grid-col-demo">col-4</div>
-          <div class="col-8 grid-col-demo grid-col-demo--alt">col-8</div>
-        </div>
-        <div class="row grid-row-demo">
-          <div class="col-6 grid-col-demo">col-6</div>
-          <div class="col-6 grid-col-demo grid-col-demo--alt">col-6</div>
-        </div>
-      </div>
-      <pre>
-        <code>
-          &lt;div class=&quot;row&quot;&gt;
-            &lt;div class=&quot;col-4&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col-8&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-        </code>
-      </pre>
-    </div>
     </div>
   </body>
 </html>

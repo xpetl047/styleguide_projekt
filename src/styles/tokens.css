@@ -22,4 +22,22 @@
   --grid-columns: 12;
   --grid-gap: 2.4rem;
   --grid-max-width: 120rem;
+
+  --table-border-color: var(--card-border-color);
+  --table-th-color:     #6b7280;
+  --table-th-bg:        #f9fafb;
+
+  --badge-open-bg:        #e0f2fe;
+  --badge-open-color:     #0369a1;
+  --badge-progress-bg:    #fef9c3;
+  --badge-progress-color: #854d0e;
+  --badge-closed-bg:      #dcfce7;
+  --badge-closed-color:   #166534;
+
+  --badge-low-bg:         #f1f5f9;
+  --badge-low-color:      #475569;
+  --badge-medium-bg:      #fff7ed;
+  --badge-medium-color:   #c2410c;
+  --badge-high-bg:        #fef2f2;
+  --badge-high-color:     #b91c1c;
 }
