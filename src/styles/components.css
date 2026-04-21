@@ -1,7 +1,3 @@
-/* ── Reset ── */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: var(--font-family); background: var(--color-background); }
-
 /* ── Layout ── */
 .card {
   padding: var(--card-padding);
@@ -96,23 +92,67 @@ body { font-family: var(--font-family); background: var(--color-background); }
 .badge-brankar     { background: #fef9c3; color: #a16207; }
 .badge-kat         { background: var(--color-dark); color: #fff; }
 
-/* Table */
+/* ── Table ── */
+.table { width: 100%; border-collapse: collapse; font-size: 1.4rem; }
+.table th, .table td { padding: 1.2rem 1.6rem; text-align: left; border-bottom: 0.1rem solid var(--table-border-color); }
+.table th { font-weight: 600; color: var(--table-th-color); background: var(--table-th-bg); }
+.table tbody tr { cursor: pointer; transition: background 0.1s; }
+.table tbody tr:hover { background: rgba(110,219,146,.07); }
+.table tbody tr:last-child td { border-bottom: none; }
+.row-actions { display: flex; gap: 0.4rem; opacity: 0; transition: 0.12s; }
+tr:hover .row-actions { opacity: 1; }
 
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 1.4rem;
-}
+/* ── Login ── */
+.login-screen           { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--color-dark); }
+.login-box              { width: 100%; max-width: 40rem; }
+.login-box h1           { margin: 0 0 2.4rem; font-size: 2.4rem; text-align: center; }
+.login-box .card        { width: 45rem; margin-left: auto; margin-right: auto; border: none; box-shadow: 0 0.8rem 3.2rem rgba(0,0,0,.25); }
+.forgot                 { display: block; text-align: right; font-size: 1.4rem; color: var(--color-primary); margin-top: 0.4rem; }
 
-.table th,
-.table td {
-  padding: 1.2rem 1.6rem;
-  text-align: left;
-  border-bottom: 0.1rem solid var(--table-border-color);
-}
+/* ── Loading / Empty ── */
+.loading-state { text-align: center; padding: 4rem; color: #6b7280; }
+.spinner       { width: 3.6rem; height: 3.6rem; border: 0.3rem solid #e5e7eb; border-top-color: var(--color-primary); border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 1.2rem; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.empty-state   { text-align: center; padding: 3.2rem; color: #9ca3af; }
+.empty-state a { color: var(--color-success); font-weight: 600; }
 
-.table th {
-  font-weight: 600;
-  color: var(--table-th-color);
-  background: var(--table-th-bg);
-}
+/* ── Typography utils ── */
+.text-success { color: var(--color-success); }
+.text-danger  { color: var(--color-danger); }
+.text-muted   { color: #9ca3af; }
+.text-primary { color: var(--color-success); }
+.font-bold    { font-weight: 700; }
+.text-sm      { font-size: 1.2rem; }
+.text-center  { text-align: center; }
+
+/* ── Card variants ── */
+.card-flush  { padding: 0; }
+.card-sm     { max-width: 60rem; }
+.card-md     { max-width: 80rem; }
+.card-lg     { max-width: 90rem; }
+
+/* ── Form title ── */
+.form-title  { font-size: 2rem; font-weight: 700; margin-bottom: 2rem; }
+
+/* ── Input variants ── */
+textarea.input   { resize: vertical; }
+.input-auto      { width: auto; }
+.input-cell      { padding: 0.4rem; text-align: center; }
+
+/* ── Table utils ── */
+.td-center       { text-align: center; }
+
+/* ── Stars ── */
+.text-star       { color: var(--color-star); }
+
+/* ── Section header flush ── */
+.section-header--flush { margin-top: 0; }
+
+/* ── Login demo ── */
+.login-demo      { margin-top: 1.6rem; font-size: 1.2rem; color: #9ca3af; text-align: center; }
+
+/* ── Alert — vždy margin-bottom ── */
+.alert { margin-bottom: 1.6rem; }
+
+/* ── Badge score ── */
+.badge-score { margin-left: 0.6rem; }
