@@ -27,6 +27,7 @@
   --table-th-color:     #6b7280;
   --table-th-bg:        #f9fafb;
 
+  /* Badge — status */
   --badge-open-bg:        #e0f2fe;
   --badge-open-color:     #0369a1;
   --badge-progress-bg:    #fef9c3;
@@ -34,10 +35,20 @@
   --badge-closed-bg:      #dcfce7;
   --badge-closed-color:   #166534;
 
+  /* Badge — priority */
   --badge-low-bg:         #f1f5f9;
   --badge-low-color:      #475569;
   --badge-medium-bg:      #fff7ed;
   --badge-medium-color:   #c2410c;
   --badge-high-bg:        #fef2f2;
   --badge-high-color:     #b91c1c;
+
+  /* HC Mládež specifické */
+  --color-dark: #0f1e35;
+  --color-success: #16a34a;
+  --color-success-bg: #f0fdf4;
+  --color-success-border: #bbf7d0;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+  --color-star: #f59e0b;
 }
